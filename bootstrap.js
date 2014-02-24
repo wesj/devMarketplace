@@ -52,6 +52,8 @@ function loadIntoWindow(window) {
   pref("dom.payment.provider.4.uri", "http://people.mozilla.com/~kmcmillan/pay-provider.html?req=");
   pref("dom.payment.provider.4.type", "mock/payments/inapp/v1");
   pref("dom.payment.provider.4.requestMethod", "GET");
+
+  pref("browser.webapps.apkFactoryUrl", "https://apk-controller.stage.mozaws.net/application.apk");
 }
 
 function unloadFromWindow(window) {
@@ -84,6 +86,8 @@ function unloadFromWindow(window) {
   unpref("dom.payment.provider.4.uri", "http://people.mozilla.com/~kmcmillan/pay-provider.html?req=");
   unpref("dom.payment.provider.4.type", "mock/payments/inapp/v1");
   unpref("dom.payment.provider.4.requestMethod", "GET");
+
+  unpref("browser.webapps.apkFactoryUrl", "https://apk-controller.stage.mozaws.net/application.apk");
 }
 
 var windowListener = {
@@ -95,10 +99,10 @@ var windowListener = {
       loadIntoWindow(domWindow);
     }, false);
   },
-  
+
   onCloseWindow: function(aWindow) {
   },
-  
+
   onWindowTitleChange: function(aWindow, aTitle) {
   }
 };
