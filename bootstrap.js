@@ -26,8 +26,6 @@ function loadIntoWindow(window) {
     return;
 
   pref("dom.payment.skipHTTPSCheck", true);
-  pref("dom.identity.enabled", true);
-  pref("toolkit.identity.debug", true);
 
   pref("dom.payment.provider.1.name", "firefoxmarketdev");
   pref("dom.payment.provider.1.description", "marketplace-dev.allizom.org");
@@ -60,8 +58,6 @@ function unloadFromWindow(window) {
   if (!window)
     return;
   unpref("dom.payment.skipHTTPSCheck", true);
-  unpref("dom.identity.enabled", true);
-  unpref("toolkit.identity.debug", true);
 
   unpref("dom.payment.provider.1.name", "firefoxmarketdev");
   unpref("dom.payment.provider.1.description", "marketplace-dev.allizom.org");
